@@ -11,8 +11,6 @@ public class HeatBar : MonoBehaviour {
     public Image hearBarBackgroundImage;
     public Color startColor = Color.yellow;
     public Color endColor = Color.red;
-
-    private Color overlayColor;
         
     void Start() {
         heatBarImage.fillAmount = 0;
@@ -21,11 +19,11 @@ public class HeatBar : MonoBehaviour {
     }
 
     void OnEnable() {
-        dinoUI.dino.HeatChangePercentage += UpdateHeatBar;
+        dinoUI.gameCharacter.HeatChangePercentage += UpdateHeatBar;
     }
 
     void OnDisable() {
-        dinoUI.dino.HeatChangePercentage -= UpdateHeatBar;
+        dinoUI.gameCharacter.HeatChangePercentage -= UpdateHeatBar;
     }
 
     private void UpdateHeatBar(float percentage) {
@@ -34,7 +32,7 @@ public class HeatBar : MonoBehaviour {
         hearBarBackgroundImage.fillAmount = 1f - percentage;
 
         //Change color of bar and overlay
-        if (!dinoUI.dino.Overheated) {
+        if (!dinoUI.gameCharacter.Overheated) {
             heatBarImage.color = Color.Lerp(startColor, endColor, percentage);
         } else {
             heatBarImage.color = endColor;
