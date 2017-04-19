@@ -24,16 +24,14 @@ public class WorldDinoUI : DinoUI {
 
     void OnValidate() {
         if (gameObject.activeInHierarchy) {
-            if (Application.isPlaying) {
-                cameraTransform = playerCamera.transform;
-            } else {
+            if (!Application.isPlaying) {
                 transform.localPosition = offset;
             }
         }
     }
 	
 	// Update is called once per frame
-	void LateUpdate () {
+	void LateUpdate() {
         //Turns out the best way to get a GUI to face the camera is to simply match the camera's world rotation.
         tr.localPosition = offset;
         tr.rotation = cameraTransform.rotation;

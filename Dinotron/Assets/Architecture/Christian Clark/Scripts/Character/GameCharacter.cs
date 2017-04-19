@@ -9,6 +9,9 @@ using System.Collections.Generic;
 // If a GameCharacter does not have a CharacterGun and a Weapon, it cannot fire.
 public class GameCharacter : MonoBehaviour {
 
+    private static float HEAT_COOLDOWN_UPDATE_WAIT = 1 / 30f;
+    private static float WEAPON_UPDATE_WAIT = 1 / 30f;
+
     public CharacterMotor motor;
 
     // Inputs
@@ -130,11 +133,13 @@ public class GameCharacter : MonoBehaviour {
         // If we die, send out both a static delegate and an instance delegate.
         // The static delegate is for anything that needs to know when a character has died.
         // The instance delegate is for any components that are attached to the character.
-        if (currentHealth == 0 && Death != null) {
+        if (currentHealth == 0) {
             if (CharacterDeath != null) {
                 CharacterDeath(this);
             }
-            Death();
+            if (Death != null) {
+                Death();
+            }
         }
     }
 
@@ -441,6 +446,15 @@ public class GameCharacter : MonoBehaviour {
         weaponsGroupObject = new GameObject("Weapons");
         weaponsGroupObject.transform.parent = this.transform;
     }
+
+    void OnEnable() {
+        StartCoroutine(this.CoroutineUpdate(HEAT_COOLDOWN_UPDATE_WAIT, UpdateHeat));
+        StartCoroutine(this.CoroutineUpdate(WEAPON_UPDATE_WAIT, UpdateWeapon));
+    }
+
+    void OnDisable() {
+        StopAllCoroutines();
+    }
         
     // Make sure we're all good to go!
     void Start() {
@@ -465,10 +479,8 @@ public class GameCharacter : MonoBehaviour {
         }
     }
 
-    // Update is called once per frame
-    protected virtual void Update () {
+    protected void UpdateWeapon(float deltaTime) {
         UpdateWeapon(fireInput);
-        UpdateHeat();
     }
 
     protected virtual void UpdateWeapon(bool fireInput) {
@@ -487,11 +499,11 @@ public class GameCharacter : MonoBehaviour {
         }
     }
 
-    protected virtual void UpdateHeat() {
+    protected virtual void UpdateHeat(float deltaTime) {
         // Update heat cooling
         // If we got overheated, then we need to wait before we can do cooling again.
         if (!overheated || (overheated && (Time.time >= overheatedAtTime + overheatWaitPeriod))) {
-            CurrentHeat -= heatCooldownPerSecond * Time.deltaTime;
+            CurrentHeat -= heatCooldownPerSecond * deltaTime;
         }
     }
     

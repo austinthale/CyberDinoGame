@@ -50,14 +50,14 @@ public class PlayerOrbitCamera : MonoBehaviour {
     }
 
 	
-	// Update is called once per frame
-	void LateUpdate () {
+	//Honestly better just as a LateUpdate() call.
+	private void LateUpdate() {
         if (target) {
-
+            float delta = Time.deltaTime;
             Vector3 targetPosition = target.position + (target.rotation * targetOffset);
 
-            horizontalAngle += horzInput * horizontalSpeed * Time.deltaTime;
-            verticalAngle -= ((invertVerticalAxis) ? -1 : 1) * vertInput * verticalSpeed * Time.deltaTime;
+            horizontalAngle += horzInput * horizontalSpeed * delta;
+            verticalAngle -= ((invertVerticalAxis) ? -1 : 1) * vertInput * verticalSpeed * delta;
 
             verticalAngle = Mathf.Clamp(verticalAngle, minimumVerticalAngle, maximumVerticalAngle);
 
@@ -74,5 +74,5 @@ public class PlayerOrbitCamera : MonoBehaviour {
             tr.rotation = newRotation;
             tr.position = newPosition;
         }
-	}
+    }
 }

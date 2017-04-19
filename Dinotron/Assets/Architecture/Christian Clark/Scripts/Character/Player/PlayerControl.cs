@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(RigidbodyMotor))]
 public class PlayerControl : MonoBehaviour {
 
     public int playerNumber = 1;
@@ -59,7 +58,7 @@ public class PlayerControl : MonoBehaviour {
     }
 
     private void JumpInput(ButtonState button) {
-        if (!dino.jumpInput && button.Pressed) {
+        if (button.Pressed) {
             dino.jumpInput = true;
         }
     }

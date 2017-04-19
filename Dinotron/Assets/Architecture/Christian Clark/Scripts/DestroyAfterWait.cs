@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-//Wait a ceertian amount of time than Destroy the game object.
+//Wait a certian amount of time than Destroy the game object.
 public class DestroyAfterWait : MonoBehaviour {
 
     public float waitTime = 0f;
