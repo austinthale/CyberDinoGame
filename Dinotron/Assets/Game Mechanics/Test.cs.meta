@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 13a4a3d7b6a072f41a66b788ac6bb6e6
-timeCreated: 1492307416
+guid: 21c7433ee49581b439bc907f1b04aa86
+timeCreated: 1491941639
 licenseType: Free
-=======
-guid: e771da8282224464ba717129614445b1
-timeCreated: 1492545118
-licenseType: Pro
->>>>>>> develop
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []
