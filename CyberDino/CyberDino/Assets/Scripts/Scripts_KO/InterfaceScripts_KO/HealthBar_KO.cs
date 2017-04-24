@@ -2,11 +2,13 @@
 using System.Collections;
 using System;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class HealthBar_KO : MonoBehaviour
 {
     public Text[] percentageEveryone;
     public Text percentageHUD;
+
     //This script decreases the health bar when the player is damaged
     //Variable for the health bar that is displayed to everyone
     public Image[] healthBar;
@@ -48,16 +50,19 @@ public class HealthBar_KO : MonoBehaviour
 }
 
 /* Instructions:
-    1.Add the two prefabs "Display Health to Everyone" and either "Player 1 HUD", "PLayer 2 HUD", "PLayer 3 HUD", or "Player 4 HUD" (depending on the player) to each player. The prefabs are in the folder Prefab->HUD->Health Bar
-    2. In each of the Player HUD prefabs add the correct camera to the canvas under Render Camera. For "PLayer 1 HUD", the camera is the player 1 camera. Do not do this for the "Display Health to Everyone" prefab.
-    3. Create 4 new layers in the layer tab (Name them "Player 1 Display", "PLayer 2 Display", "Player 3 Display", and "Player 4 Display") for each player.
-    4. Change the layer on each of the prefabs named "Display Health to Everyone" to the corresponding layer name. For example, the "Display Health to Everyone" for player 4 (and all of the children) will be in the
-    layer, "Player 4 Display".
-    5. On each of the player's cameras, under culling mask, deselect the layer name that corresponds to the player. So for player 4, you have to deselect "PLayer 4 Display".
-    6. Add this "Health Bar" script to each of the players.
-    8. Attach the game objects that have the same name in each prefab to this script in the inspector.
-        Example:
-             -In the hierarchy, under Player 1 -> Player 1 HUD -> Health Bar Base -> Health Bar HUD (Health Bar HUD attaches to the healthBarHUD GameObject in this script in the inspector)
-             -In the hierarchy, under Player 1 -> Display Health to Everyone -> Health Bar Base -> Health Bar (Health Bar attaches to the healthBar GameObject in this script in the inspector)
+    I have a scene set up with how this all works called "Multiplayer HUD". It is in the Scenes Folder Under "Scenes_KO" -> "InterfaceScene_KO"
+    1. For player 1 add the prefabs Display Health to Player 2, Display Health to Player 3, Display Health to Player 4, and Player Health Display.(Do not add the "Display Health to Player 1" prefab)
+    (These prefabs can be found in the prefab folder -> Prefabs_KO -> InterfacePrefabs_KO)
+    2. Zero out all of the rotations and positions on the Display Health to Player prefabs, except for the Y position.
+    3. Add this script to the player.
+    4. In the inspector, on this script, set the size of the two lists (Percentage Everyone and Health Bar) to 3.
+    5. Add the 3 Images called "Health Bar" (it's under each of the "Display Health to Player" prefabs) to the Health Bar List in the inspector.
+    6. Add the 3 Texts called "Health Percentage" (Display Health to Player prefab -> Health Bar -> Health Percentage) to the Percentage Everyone List in the inspector.
+    7. Add "Health Bar 2" (Player Health Display -> Health Bar 2) to the Health Bar HUD variable in the inspector.
+    8. Add "Health Percentage" (Player Health Display -> Health Percentage) to the Percentage HUD variable in the inspector.
+    9. The Player 1 camera culling mask should have all of the "Player _ Display" layers deselected except for the "PLayer 1 Display" layer.
+    10. The "Display Health to Player 2" prefab (and all the children) should be in the "Player 2 Display" Layer, "Display Health to Player 3" prefab 
+    (and all the children) should be in the "Player 3 Display" Layer, etc.
+    11. Repeat this for the other 3 players. 
     */
 
