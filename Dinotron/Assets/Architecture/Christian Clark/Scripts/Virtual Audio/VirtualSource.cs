@@ -144,7 +144,6 @@ public class VirtualSource : MonoBehaviour {
                         totalWeight += l.weight;
                     }
                     //Find the average offset and the average distance.
-                    int count = VirtualListener.activeListeners.Count;
                     averageOffset /= totalWeight;
                     averageDistance /= totalWeight;
                     averageForward /= totalWeight;

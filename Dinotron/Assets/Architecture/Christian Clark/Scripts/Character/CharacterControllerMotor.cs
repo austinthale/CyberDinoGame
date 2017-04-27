@@ -58,7 +58,6 @@ public class CharacterControllerMotor : CharacterMotor {
     /// </summary>
     bool wasTouchingGround;
 
-    private bool groundStickyCollision;
     private ControllerColliderHit groundStickyCollisionHit;
     private bool groundStickyMove;
 
@@ -243,9 +242,8 @@ public class CharacterControllerMotor : CharacterMotor {
                 newSpeed = Mathf.Max(newSpeed, 0);
 
                 accelerationChange = accelerationChange.normalized * newSpeed;
-                if (accelerationChange.y > 0) {
-                    accelerationChange.y = 0;
-                }
+                accelerationChange.y = 0; //Technically the character controller would handle being bumped up the slope, but I want that upwards movement factored into the velocity.
+                
             }
 
         }
@@ -278,7 +276,6 @@ public class CharacterControllerMotor : CharacterMotor {
 
         if (IsTouchingGround) {
             // If we're on the ground, apply gravity such that it sticks us to the slope.
-            velocity = Vector3.ProjectOnPlane(velocity, GroundNormal);
             velocity -= (gravity * deltaTime) * GroundNormal;
         }
 
@@ -318,8 +315,7 @@ public class CharacterControllerMotor : CharacterMotor {
         //////////////////////////////////////////////
 
         Quaternion rotationTarget = Quaternion.identity;
-        //Rotate the way we're moving towards! But only if we have some sideways input.
-        //This would work much better if the camera wasn't parented directy to the player
+        //Rotate the way we're moving towards!
         if (enableAutoRotation && gameCharacter.moveInput.magnitude >= smallTolerance) {
             rotationTarget = Quaternion.FromToRotation(Vector3.forward, gameCharacter.moveInput);
             rotationTarget.eulerAngles = new Vector3(0, rotationTarget.eulerAngles.y, 0);
@@ -362,7 +358,6 @@ public class CharacterControllerMotor : CharacterMotor {
         CeilingNormalAngle = -1;
         IsTouchingCeiling = false;
 
-        groundStickyCollision = false;
         groundStickyCollisionHit = null;
 
         ////////////////////////////////////
@@ -426,7 +421,6 @@ public class CharacterControllerMotor : CharacterMotor {
             } else if (hit.point.y < groundStickyCollisionHit.point.y) {
                 groundStickyCollisionHit = hit;
             }
-            groundStickyCollision = true;
         }
     }
 

@@ -288,7 +288,7 @@ public class RigidbodyMotor : CharacterMotor {
 
         //Gravity and other forces
         if (IsTouchingGround) {
-            if (!IsStandingOnSteepSlope && velocity.y > 0) {
+            if (!IsStandingOnSteepSlope && velocity.y >= 0) {
                 // If we're on the ground, apply gravity such that it sticks us to the slope.
                 velocity -= GroundNormal * gravity * fixedDeltaTime;
             } else {

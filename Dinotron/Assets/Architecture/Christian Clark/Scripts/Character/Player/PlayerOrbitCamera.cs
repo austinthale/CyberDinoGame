@@ -72,7 +72,7 @@ public class PlayerOrbitCamera : MonoBehaviour {
             Vector3 newPosition = newRotation * (Vector3.back * actualDistance) + (target.position + targetOffset);
 
             tr.rotation = newRotation;
-            tr.position = newPosition;
+            tr.position = Vector3.Lerp(tr.position, newPosition, 0.99f);
         }
     }
 }
