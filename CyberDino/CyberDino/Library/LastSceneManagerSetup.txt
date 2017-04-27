@@ -1,4 +1,0 @@
-sceneSetups:
-- path: C:/Users/Christian/Desktop/CyberDinoGame-Collector/CyberDinoGame-Collector/CyberDino/CyberDino/Assets/Scenes/VFXPractice_JF.unity
-  isLoaded: 1
-  isActive: 1
