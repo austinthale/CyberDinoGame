@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.Networking;
+using System.Collections.Generic;
 
-public class PlayerController : MonoBehaviour
-{
+public class PlayerController_AH_JR : MonoBehaviour {
+
     private static Vector3 lastPosition;
     public float MoveSpeed = 40, RotateSpeed = 50;
     public float jumpVelocity = 20;
@@ -73,34 +73,15 @@ public class PlayerController : MonoBehaviour
             }
             if (Input.GetButtonDown("Fire1") && Time.time >= timeStamp/* && canShoot == true*/)
             {
-                CmdFire();
+                //Fire();
                 //StartCoroutine(Shoot());
             }
             yield return null;
         }
     }
 
-    /*public IEnumerator Shoot()
-    {
-        canShoot = false;
-        yield return new WaitForSeconds(.25f);
-        // Create the Bullet from the Bullet Prefab
-        var bullet = (GameObject)Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
-
-        // Add velocity to the bullet
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 6; //6 is speed of bullet
-        canShoot = true;
-
-        // Spawn the bullet on the Clients
-        NetworkServer.Spawn(bullet);
-
-
-        // Destroy the bullet after 2 seconds
-        Destroy(bullet, 2.0f);
-    }*/
-
     //[Command] //indicates that the function will be called by Client, but will be run on Server
-    void CmdFire()
+    /*void Fire()
     {
         // Create the Bullet from the Bullet Prefab
         var bullet = (GameObject)Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
@@ -114,7 +95,7 @@ public class PlayerController : MonoBehaviour
         // Destroy the bullet after 2 seconds
         Destroy(bullet, 2.0f);
 
-    }
+    }*/
 
     public void OnStartLocalPlayer()
     {
@@ -124,6 +105,4 @@ public class PlayerController : MonoBehaviour
         camFollow.transform.position = transform.position;
         camFollow.enabled = true;
     }
-
 }
-
