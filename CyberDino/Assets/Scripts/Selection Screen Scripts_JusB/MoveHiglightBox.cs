@@ -22,10 +22,7 @@ public class MoveHiglightBox : MonoBehaviour {
 		highlightPosition = 0;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 	void MoveHighlightBox(KeyCode input)
 	{
 		if (input == playerInput.GetUpKey ()) {

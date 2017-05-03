@@ -18,34 +18,22 @@ public class InputManager_JusB: MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine (PlayerInput ());
+		
 	}
 
-	void Update () {
-	
-	}
-	void OnEnable () {
-		StartCoroutine (PlayerInput ());
-	}
-	void OnDisable() {
-		StopCoroutine (PlayerInput());
-	}
-
-	IEnumerator PlayerInput(){
-		while (this == enabled) {
-			if (Input.GetKey (TabKey)) {
+	void Update(){
+			if (Input.GetKeyDown (TabKey)) {
+				Debug.Log ("Whoa");
 				keyPressed (TabKey);
-			} else if (Input.GetKey (UpKey)) {
+			} else if (Input.GetKeyDown (UpKey)) {
 				keyPressed (UpKey);
-			} else if (Input.GetKey (DownKey)) {
+			} else if (Input.GetKeyDown (DownKey)) {
 				keyPressed (DownKey);
-			} else if (Input.GetKey (LeftKey)) {
+			} else if (Input.GetKeyDown (LeftKey)) {
 				keyPressed (LeftKey);
-			} else if (Input.GetKey (RightKey)) {
+			} else if (Input.GetKeyDown (RightKey)) {
 				keyPressed (RightKey);
 			}
-			yield return new WaitForSeconds(0.1f);
-		}
 	}
 	public KeyCode GetTabKey()
 	{
