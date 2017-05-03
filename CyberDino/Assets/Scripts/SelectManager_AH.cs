@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic; //allows use of generic lists
 
-public class SelectManager : MonoBehaviour {
+/*public class SelectManager : MonoBehaviour {
 	public List<GetDinoInfo> listDinoManagers;
     private int count;
 	
@@ -16,4 +16,4 @@ public class SelectManager : MonoBehaviour {
         }
 	}
 
-}
+}*/
