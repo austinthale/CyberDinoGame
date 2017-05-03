@@ -4,7 +4,7 @@ using System.Collections;
 public class MoveHiglightBox : MonoBehaviour {
 	[SerializeField]
 	private GameObject player;
-	private InputManager playerInput;
+	private InputManager_JusB playerInput;
 	[SerializeField]
 	private GameObject[] boxes;
 	[SerializeField]
@@ -16,7 +16,7 @@ public class MoveHiglightBox : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Debug.Log ("made it");
-		playerInput = player.GetComponent<InputManager> ();
+		playerInput = player.GetComponent<InputManager_JusB> ();
 		gameObject.transform.position = boxes[0].transform.position;
 		playerInput.keyPressed += MoveHighlightBox;
 		highlightPosition = 0;

@@ -6,14 +6,14 @@ public class EnableDisable : MonoBehaviour {
 	private bool startEnabled;
 	[SerializeField]
 	private GameObject player;
-	private InputManager playerManager;
+	private InputManager_JusB playerManager;
 	[SerializeField]
 	private KeyCode ToggleKey;
 
 	// Use this for initialization
 	void Start () {
 		gameObject.SetActive (startEnabled);
-		playerManager = player.GetComponent<InputManager>();
+		playerManager = player.GetComponent<InputManager_JusB>();
 		playerManager.keyPressed += toggleTab;
 	}
 	

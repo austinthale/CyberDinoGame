@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class InputManager : MonoBehaviour {
+public class InputManager_JusB: MonoBehaviour {
 	[SerializeField]
 	private KeyCode TabKey;
 	[SerializeField]
@@ -20,22 +20,20 @@ public class InputManager : MonoBehaviour {
 	void Start () {
 		StartCoroutine (PlayerInput ());
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 	
 	}
 	void OnEnable () {
-		PlayerInput ();
+		StartCoroutine (PlayerInput ());
 	}
 	void OnDisable() {
 		StopCoroutine (PlayerInput());
 	}
+
 	IEnumerator PlayerInput(){
 		while (this == enabled) {
-			//Debug.Log ("this is running");
 			if (Input.GetKey (TabKey)) {
-				Debug.Log ("got through");
 				keyPressed (TabKey);
 			} else if (Input.GetKey (UpKey)) {
 				keyPressed (UpKey);
@@ -46,7 +44,6 @@ public class InputManager : MonoBehaviour {
 			} else if (Input.GetKey (RightKey)) {
 				keyPressed (RightKey);
 			}
-			//Debug.Log ("running playerinput");
 			yield return new WaitForSeconds(0.1f);
 		}
 	}
