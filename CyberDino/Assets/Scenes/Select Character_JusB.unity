@@ -186,9 +186,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21558e798ae284f9b938cfb4e9cbf88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySlider: {fileID: 26739775}
-  stat: 4
-  signalSource: {fileID: 1046926297}
 --- !u!1 &39206548
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,9 +417,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d6f5ad6682637408a9af8fc7ff215e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: 337
-  altKey: 13
-  scene: 546573744c6576656c
 --- !u!4 &212421172
 Transform:
   m_ObjectHideFlags: 0
@@ -484,9 +478,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21558e798ae284f9b938cfb4e9cbf88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySlider: {fileID: 227827561}
-  stat: 4
-  signalSource: {fileID: 1046926297}
 --- !u!114 &227827561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,9 +622,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21558e798ae284f9b938cfb4e9cbf88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySlider: {fileID: 269163901}
-  stat: 0
-  signalSource: {fileID: 1046926297}
 --- !u!1 &296003702
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,8 +652,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1418790384}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.999, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -892,9 +880,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21558e798ae284f9b938cfb4e9cbf88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySlider: {fileID: 369655124}
-  stat: 2
-  signalSource: {fileID: 1046926297}
 --- !u!114 &369655124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -973,8 +958,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 527078055}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.9375, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1243,9 +1228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21558e798ae284f9b938cfb4e9cbf88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySlider: {fileID: 697280683}
-  stat: 3
-  signalSource: {fileID: 1046926297}
 --- !u!1 &711978930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,13 +1255,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e893c30fab5e8548852aae2ddc0ecaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 11400000, guid: 66d3fe5e86d15644f9a1dab06c11217c, type: 2}
-  playerCount: 4
-  playerDinos:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!4 &711978932
 Transform:
   m_ObjectHideFlags: 0
@@ -1323,8 +1298,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1558172623}
   m_RootOrder: 0
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1829,9 +1804,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21558e798ae284f9b938cfb4e9cbf88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySlider: {fileID: 1030805292}
-  stat: 3
-  signalSource: {fileID: 1046926297}
 --- !u!114 &1030805292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1888,7 +1860,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 1046926298}
-  - 114: {fileID: 1046926300}
+  - 114: {fileID: 1046926299}
   m_Layer: 5
   m_Name: Player1
   m_TagString: Untagged
@@ -1916,7 +1888,7 @@ RectTransform:
   m_AnchoredPosition: {x: -495, y: 272}
   m_SizeDelta: {x: -990, y: -544}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1046926300
+--- !u!114 &1046926299
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1924,27 +1896,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1046926297}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caab6a0d32ce44efc870f4d608427780, type: 3}
+  m_Script: {fileID: 11500000, guid: b7817c4d4a48f48cf84ca23b6dcff7f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfDinosaurs:
-  - {fileID: 1000012516605840, guid: d8cb09aa5c18db6488021c5e9f073356, type: 2}
-  - {fileID: 1000013045385648, guid: 415a245fa65e1624b98bf5094cbccd6e, type: 2}
-  - {fileID: 1000013770584136, guid: a5cdb3dc0e70c564fab732cf3dadd8b6, type: 2}
-  - {fileID: 1000014090476004, guid: d08d2d8d461d7bd4795ee711dec23f01, type: 2}
-  dinoStatistics: []
-  dinoWeapons: []
-  panels:
-  - {fileID: 1949249818}
-  - {fileID: 1142085118}
-  - {fileID: 2002124970}
-  - {fileID: 1247623289}
-  player: 0
-  inputConfig: {fileID: 11400000, guid: c6d8b30170bcb22468a04d4b9dae93b6, type: 2}
-  numberOfCols: 2
-  highlightPosition: {x: 0, y: 0, z: 0}
-  highlightbox: {fileID: 1581370757}
-  highlightTranformer: {fileID: 0}
+  TabKey: 9
+  UpKey: 119
+  DownKey: 115
+  LeftKey: 97
+  RightKey: 100
 --- !u!1 &1066037712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,9 +2034,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21558e798ae284f9b938cfb4e9cbf88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySlider: {fileID: 1100354885}
-  stat: 2
-  signalSource: {fileID: 1046926297}
 --- !u!1 &1110151640
 GameObject:
   m_ObjectHideFlags: 0
@@ -2306,7 +2262,6 @@ GameObject:
   - 223: {fileID: 1214389791}
   - 114: {fileID: 1214389790}
   - 114: {fileID: 1214389789}
-  - 114: {fileID: 1214389793}
   m_Layer: 5
   m_Name: SelectionInterface
   m_TagString: Untagged
@@ -2389,22 +2344,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1214389793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1214389788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6b0f01ff1fd2c3458400ebd9e126113, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  listDinoManagers:
-  - {fileID: 1046926300}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &1226769792
 GameObject:
   m_ObjectHideFlags: 0
@@ -2420,7 +2359,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1226769793
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2459,11 +2398,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1226769792}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c3bdb550e73943039889f5577413fcf, type: 3}
+  m_Script: {fileID: 11500000, guid: 55b03571e9a4c43b8949b92d18f67d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputConfig: {fileID: 11400000, guid: c6d8b30170bcb22468a04d4b9dae93b6, type: 2}
-  startingActive: 0
+  startEnabled: 0
+  player: {fileID: 1046926297}
+  ToggleKey: 0
 --- !u!1 &1237381284
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,9 +2500,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21558e798ae284f9b938cfb4e9cbf88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySlider: {fileID: 1237381286}
-  stat: 1
-  signalSource: {fileID: 1046926297}
 --- !u!1 &1247623289
 GameObject:
   m_ObjectHideFlags: 0
@@ -2738,11 +2675,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1264755140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c3bdb550e73943039889f5577413fcf, type: 3}
+  m_Script: {fileID: 11500000, guid: 55b03571e9a4c43b8949b92d18f67d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputConfig: {fileID: 11400000, guid: c6d8b30170bcb22468a04d4b9dae93b6, type: 2}
-  startingActive: 1
+  startEnabled: 1
+  player: {fileID: 1046926297}
+  ToggleKey: 0
 --- !u!1 &1324734270
 GameObject:
   m_ObjectHideFlags: 0
@@ -2791,9 +2729,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21558e798ae284f9b938cfb4e9cbf88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySlider: {fileID: 1324734273}
-  stat: 1
-  signalSource: {fileID: 1046926297}
 --- !u!114 &1324734273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3059,8 +2994,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 520834931}
   m_RootOrder: 0
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3212,9 +3147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21558e798ae284f9b938cfb4e9cbf88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mySlider: {fileID: 1463503801}
-  stat: 0
-  signalSource: {fileID: 1046926297}
 --- !u!114 &1463503801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3510,6 +3442,7 @@ GameObject:
   - 224: {fileID: 1581370758}
   - 222: {fileID: 1581370760}
   - 114: {fileID: 1581370759}
+  - 114: {fileID: 1581370761}
   m_Layer: 5
   m_Name: Highlighter
   m_TagString: Untagged
@@ -3532,7 +3465,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0.277, y: 1}
-  m_AnchoredPosition: {x: 0.5799866, y: -0.21000671}
+  m_AnchoredPosition: {x: 271.88, y: -0.21000671}
   m_SizeDelta: {x: -1.8200073, y: 0.17001343}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1581370759
@@ -3567,6 +3500,25 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1581370757}
+--- !u!114 &1581370761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1581370757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3046b5de523742d09cdc8a1bfcb9b46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1046926297}
+  boxes:
+  - {fileID: 1949249818}
+  - {fileID: 1142085118}
+  - {fileID: 2002124970}
+  - {fileID: 1247623289}
+  rows: 2
+  columns: 2
 --- !u!1 &1585484767
 GameObject:
   m_ObjectHideFlags: 0
@@ -4020,8 +3972,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1066037713}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.68333334, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4785,8 +4737,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30ff1967ab6bf45d49b0c6d646013bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dinoName: {fileID: 2110087800}
-  signalSource: {fileID: 1046926297}
 --- !u!114 &2110087800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4837,6 +4787,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eccf7757faed94aa3abf7c8c86bcbc0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dinoName: {fileID: 2110087800}
-  signalSource: {fileID: 1046926297}
-  dinosaurPosition: 0
