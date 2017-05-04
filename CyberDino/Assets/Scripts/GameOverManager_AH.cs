@@ -17,14 +17,24 @@ public class GameOverManager_AH : MonoBehaviour
     {
         // Set up the reference.
         anim = GetComponent<Animator>();
+		//Subscribe
         MapManager.OnGameEnd += OnGameEnd;
 
         gameObject.SetActive(false);
     }
 
+	void OnDestroy() {
+		//Unsub
+		MapManager.OnGameEnd -= OnGameEnd;
+	}
+
     private void OnGameEnd(PlayerData[] winners, PlayerData[] allPlayers)
     {
-        winner.text = "Player " + (winners[0].playerNumber) + " wins!!!";
+		if (winners.Length == 1) {
+			winner.text = "Player " + (winners [0].playerNumber) + " wins!!!";
+		} else {
+			winner.text = "Draw!!!";
+		}
         Cursor.lockState = CursorLockMode.None;
         gameObject.SetActive(true);
         anim.SetTrigger("GameOver");
