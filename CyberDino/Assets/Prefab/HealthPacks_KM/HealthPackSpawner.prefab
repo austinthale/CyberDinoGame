@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012222855606}
   - 114: {fileID: 114000011568387846}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: HealthPackSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
