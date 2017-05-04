@@ -435,7 +435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 13
   altKey: 337
-  scene: 
+  scene: Enironmente_JRR
 --- !u!4 &212421172
 Transform:
   m_ObjectHideFlags: 0

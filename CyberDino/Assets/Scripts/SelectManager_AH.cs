@@ -12,7 +12,7 @@ public class SelectManager_AH : MonoBehaviour
         PlayerManager.PlayerDinos[playerNum] = Dino;
     }
 
-    void Start () {
+    void Awake () {
         DinoHandler.passDino += onDinoSelection;
         count = PlayerManager.PlayerCount;
 
