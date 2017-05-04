@@ -36,6 +36,11 @@ public class HealthPackManager_KM : MonoBehaviour {
         */
 	}
 
+	// CC: Remember to unsub!
+	void OnDestroy() {
+		GameCharacter.CharacterDeath -= SpawnOnDeath;
+	}
+
 	/// <summary>
 	/// Activates a health pack.
 	/// </summary>
