@@ -14,6 +14,7 @@ public class DinoHandler : MonoBehaviour {
 		whichDino = highlightBox.GetComponent<MoveHiglightBox> ();
 		whichDino.changeDino += SetPosititon;
 		currentDino = prefabList[0];
+        passDino(playerNumber, prefabList[0]);
 	}
 
 	public void SetPosititon(int myPostition)

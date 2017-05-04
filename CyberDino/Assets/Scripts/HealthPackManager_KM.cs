@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -24,13 +24,16 @@ public class HealthPackManager_KM : MonoBehaviour {
 		TriggerHealthPack += MoveToInactive;
         GameCharacter.CharacterDeath += SpawnOnDeath;
 
+        /* This code is for spawning health packs in the environment, independent of dino deaths.
+         * It requires health pack prefabs to be added as children of the object this script is attached to.
 		//Populate the health pack lists. Ensure that all health packs begin disabled.
 		for (int i = 0; i < transform.childCount; i++) {
 			inactiveHealthPacks.Add (transform.GetChild(i).gameObject);
 			inactiveHealthPacks [i].SetActive (false);
 		}
 
-		//StartCoroutine (Spawn());
+		StartCoroutine (Spawn());
+        */
 	}
 
 	/// <summary>
@@ -57,6 +60,10 @@ public class HealthPackManager_KM : MonoBehaviour {
 		activeHealthPacks.Remove (healthPack);
 	}
 
+    /// <summary>
+    /// Spawns a health pack at a dinosaur's position when it dies.
+    /// </summary>
+    /// <param name="dino"></param>
     void SpawnOnDeath(GameCharacter dino)
     {
         GameObject pack = inactiveHealthPacks[0];
