@@ -27,6 +27,8 @@ public class FireBullets_AH_JR : MonoBehaviour {
         GameObject bullet = bulletPool[bulletPoolIndex];
         bullet.transform.position = spawnPoint.transform.position;
         bullet.transform.rotation = spawnPoint.transform.rotation;
+		//Cycle state of bullet (fixes OnStart not being run when bullet is grabbed from pool).
+		bullet.SetActive (false);
         bullet.SetActive(true);
         // Add velocity to the bullet
         bullet.GetComponent<Rigidbody>().velocity = Vector3.zero;
