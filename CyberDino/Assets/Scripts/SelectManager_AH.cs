@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic; //allows use of generic lists
 
-public class SelectManager : MonoBehaviour
+public class SelectManager_AH : MonoBehaviour
 {
     public List<GameObject> listDinoManagers;
     private int count;
