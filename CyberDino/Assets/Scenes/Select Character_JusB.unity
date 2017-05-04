@@ -1311,9 +1311,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 711978930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e893c30fab5e8548852aae2ddc0ecaf, type: 3}
+  m_Script: {fileID: 11500000, guid: 84d4843ea8a254643a3c8bf3a9d3bdc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: 66d3fe5e86d15644f9a1dab06c11217c, type: 2}
+  playerCount: 4
+  playerDinos:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &711978932
 Transform:
   m_ObjectHideFlags: 0
@@ -1579,6 +1586,11 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: 266f16908f8e49f48b72d11ef0b7f218,
         type: 2}
+    - target: {fileID: 114000012480496144, guid: f035c721e74f746c3b8dc3747ee40b96,
+        type: 2}
+      propertyPath: playerNumber
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f035c721e74f746c3b8dc3747ee40b96, type: 2}
   m_IsPrefabParent: 0
@@ -2271,6 +2283,7 @@ MonoBehaviour:
   - {fileID: 1000010735998168, guid: ec260d0b9107ff548877f034bc47d4bf, type: 2}
   - {fileID: 1000012995459100, guid: 87d36c0b636d5bf40ac3c90d773577da, type: 2}
   currentDino: {fileID: 0}
+  playerNumber: 0
 --- !u!1 &1066037712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2713,6 +2726,11 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: 5149b64d6cec3034bb74f79b28deb57e,
         type: 2}
+    - target: {fileID: 114000012480496144, guid: f035c721e74f746c3b8dc3747ee40b96,
+        type: 2}
+      propertyPath: playerNumber
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f035c721e74f746c3b8dc3747ee40b96, type: 2}
   m_IsPrefabParent: 0
@@ -4412,6 +4430,11 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: 594e0eb7b607bc54fac6528be7cd01b3,
         type: 2}
+    - target: {fileID: 114000012480496144, guid: f035c721e74f746c3b8dc3747ee40b96,
+        type: 2}
+      propertyPath: playerNumber
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f035c721e74f746c3b8dc3747ee40b96, type: 2}
   m_IsPrefabParent: 0
