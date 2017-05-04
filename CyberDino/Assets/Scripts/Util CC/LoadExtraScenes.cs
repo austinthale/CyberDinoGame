@@ -4,8 +4,10 @@ using System.Collections;
 
 public class LoadExtraScenes : MonoBehaviour {
 
+
     public string[] extraScenes;
     
+
 	// Use this for initialization
 	void Awake () {
         foreach (var sceneName in extraScenes) {
