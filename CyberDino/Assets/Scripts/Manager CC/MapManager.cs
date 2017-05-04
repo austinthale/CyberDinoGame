@@ -116,6 +116,14 @@ public class MapManager : MonoBehaviour {
         dinoUI.playerCamera = playerCamera;
         dinoUI.playerNumber = playerNumber;
 
+        //Ragdoll script
+        AnimToRagdoll ragdoll = dinoObject.GetComponent<AnimToRagdoll>();
+        HealthBar healthBar = dinoUI.GetComponentInChildren<HealthBar>();
+        if (ragdoll != null && healthBar != null) {
+            ragdoll.healthBar = healthBar.healthBar;
+            ragdoll.enabled = true;
+        }
+
         // Enable everything here. Enable the prefabs if they were disabled before.
         dinoObject.SetActive(true);
         cameraObject.SetActive(true);
