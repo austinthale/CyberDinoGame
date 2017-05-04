@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692492, g: 0.4967869, b: 0.57508546, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -362,11 +362,36 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000011080625650, guid: bba91e895647d1f48ad16ff70eef6598, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013656858980, guid: bba91e895647d1f48ad16ff70eef6598,
+        type: 2}
+      propertyPath: MoveSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013656858980, guid: bba91e895647d1f48ad16ff70eef6598,
+        type: 2}
+      propertyPath: RotateSpeed
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013656858980, guid: bba91e895647d1f48ad16ff70eef6598,
+        type: 2}
+      propertyPath: jumpVelocity
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013656858980, guid: bba91e895647d1f48ad16ff70eef6598,
+        type: 2}
+      propertyPath: dinoCamera
+      value: 
+      objectReference: {fileID: 84553050}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bba91e895647d1f48ad16ff70eef6598, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &84553050 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011746736712, guid: bba91e895647d1f48ad16ff70eef6598,
+    type: 2}
+  m_PrefabInternal: {fileID: 84553049}
 --- !u!1 &123411130 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 101104, guid: 42a411d2b7ffd8640bba545b4b5b329c, type: 3}
@@ -5568,7 +5593,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!143 &1809003464
 CharacterController:
   m_ObjectHideFlags: 0
@@ -5603,6 +5628,7 @@ MonoBehaviour:
   RotateSpeed: 90
   jumpVelocity: 13.3
   gravity: 20
+  dinoCamera: {fileID: 2098119510}
   bulletPrefab: {fileID: 0}
   bulletSpawn: {fileID: 0}
   canShoot: 1
@@ -5822,11 +5848,36 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000011080625650, guid: bba91e895647d1f48ad16ff70eef6598, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013656858980, guid: bba91e895647d1f48ad16ff70eef6598,
+        type: 2}
+      propertyPath: MoveSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013656858980, guid: bba91e895647d1f48ad16ff70eef6598,
+        type: 2}
+      propertyPath: RotateSpeed
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013656858980, guid: bba91e895647d1f48ad16ff70eef6598,
+        type: 2}
+      propertyPath: jumpVelocity
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013656858980, guid: bba91e895647d1f48ad16ff70eef6598,
+        type: 2}
+      propertyPath: dinoCamera
+      value: 
+      objectReference: {fileID: 1825407031}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bba91e895647d1f48ad16ff70eef6598, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1825407031 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011746736712, guid: bba91e895647d1f48ad16ff70eef6598,
+    type: 2}
+  m_PrefabInternal: {fileID: 1825407030}
 --- !u!1 &1828537904 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100754, guid: 42a411d2b7ffd8640bba545b4b5b329c, type: 3}
@@ -6175,9 +6226,34 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013656858980, guid: bba91e895647d1f48ad16ff70eef6598,
+        type: 2}
+      propertyPath: MoveSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013656858980, guid: bba91e895647d1f48ad16ff70eef6598,
+        type: 2}
+      propertyPath: RotateSpeed
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013656858980, guid: bba91e895647d1f48ad16ff70eef6598,
+        type: 2}
+      propertyPath: jumpVelocity
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013656858980, guid: bba91e895647d1f48ad16ff70eef6598,
+        type: 2}
+      propertyPath: dinoCamera
+      value: 
+      objectReference: {fileID: 1970877211}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bba91e895647d1f48ad16ff70eef6598, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1970877211 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011746736712, guid: bba91e895647d1f48ad16ff70eef6598,
+    type: 2}
+  m_PrefabInternal: {fileID: 1970877210}
 --- !u!1 &1975711570 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 101090, guid: 42a411d2b7ffd8640bba545b4b5b329c, type: 3}
