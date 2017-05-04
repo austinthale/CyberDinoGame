@@ -777,7 +777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapManager: {fileID: 327077997}
-  time: 180
+  time: 300
   timerText: {fileID: 610552725}
 --- !u!1 &626876518
 GameObject:
