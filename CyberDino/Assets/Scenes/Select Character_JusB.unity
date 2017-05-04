@@ -799,6 +799,11 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 321864266}
+--- !u!1 &348133235 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010826443320, guid: f035c721e74f746c3b8dc3747ee40b96,
+    type: 2}
+  m_PrefabInternal: {fileID: 1121201663}
 --- !u!1 &352857515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,6 +1192,11 @@ RectTransform:
   m_AnchoredPosition: {x: 5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &617642511 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010826443320, guid: f035c721e74f746c3b8dc3747ee40b96,
+    type: 2}
+  m_PrefabInternal: {fileID: 786386022}
 --- !u!1 &697280681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1315,7 +1325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   config: {fileID: 11400000, guid: 66d3fe5e86d15644f9a1dab06c11217c, type: 2}
-  playerCount: 4
+  playerCount: 2
   playerDinos:
   - {fileID: 0}
   - {fileID: 0}
@@ -1599,6 +1609,11 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224000010665825042, guid: f035c721e74f746c3b8dc3747ee40b96,
     type: 2}
   m_PrefabInternal: {fileID: 786386022}
+--- !u!1 &801820382 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010826443320, guid: f035c721e74f746c3b8dc3747ee40b96,
+    type: 2}
+  m_PrefabInternal: {fileID: 1571671036}
 --- !u!1 &808919273
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,6 +1758,51 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 815408299}
+--- !u!1 &826271016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 826271018}
+  - 114: {fileID: 826271017}
+  m_Layer: 0
+  m_Name: playerManagerHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &826271017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 826271016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5675a0a8bf553e43866f1907462cda9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listDinoManagers:
+  - {fileID: 1046926297}
+  - {fileID: 348133235}
+  - {fileID: 801820382}
+  - {fileID: 617642511}
+--- !u!4 &826271018
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 826271016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 720.7281, y: 342.21603, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!1 &842382481
 GameObject:
   m_ObjectHideFlags: 0
