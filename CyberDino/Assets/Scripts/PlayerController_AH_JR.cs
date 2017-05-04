@@ -8,6 +8,7 @@ public class PlayerController_AH_JR : MonoBehaviour {
     public float MoveSpeed = 40, RotateSpeed = 50;
     public float jumpVelocity = 20;
     public float gravity = 20;
+    public GameObject dinoCamera;
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
     private float fireRate = 0.25f;
@@ -100,7 +101,7 @@ public class PlayerController_AH_JR : MonoBehaviour {
     public void OnStartLocalPlayer()
     {
         GetComponent<MeshRenderer>().material.color = Color.blue;
-        CameraFollow camFollow = Camera.main.GetComponent<CameraFollow>();
+        CameraFollow camFollow = dinoCamera.GetComponent<CameraFollow>();
         camFollow.target = transform;
         camFollow.transform.position = transform.position;
         camFollow.enabled = true;
