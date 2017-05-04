@@ -7415,6 +7415,7 @@ GameObject:
   - 114: {fileID: 114000013116285926}
   - 143: {fileID: 143000013659740568}
   - 114: {fileID: 114000011279783682}
+  - 114: {fileID: 114000012382768808}
   m_Layer: 14
   m_Name: Spinosaurus 2.0
   m_TagString: Untagged
@@ -10364,6 +10365,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000014246331680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000010920061022}
+  - 114: {fileID: 114000013837096332}
+  m_Layer: 0
+  m_Name: BulletPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000014255923982
 GameObject:
   m_ObjectHideFlags: 1
@@ -12367,6 +12384,19 @@ Transform:
   - {fileID: 4000012793691916}
   m_Father: {fileID: 4000011689614786}
   m_RootOrder: 0
+--- !u!4 &4000010920061022
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014246331680}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000012039770642}
+  m_RootOrder: 2
 --- !u!4 &4000010926872526
 Transform:
   m_ObjectHideFlags: 1
@@ -15073,6 +15103,7 @@ Transform:
   m_Children:
   - {fileID: 4000012588449594}
   - {fileID: 4000011449177924}
+  - {fileID: 4000010920061022}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &4000012051509246
@@ -15688,7 +15719,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010040975246}
-  m_LocalRotation: {x: 0.6415521, y: 0.6415521, z: -0.2973399, w: 0.2973399}
+  m_LocalRotation: {x: 0.64155203, y: 0.64155203, z: -0.29733986, w: 0.29733986}
   m_LocalPosition: {x: 0.011840085, y: -0.0057206815, z: -0.014487319}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31167,6 +31198,27 @@ MonoBehaviour:
   maxHealth: 200
   debrisTime: 4
   coveredPart: {fileID: 4000014129276268}
+--- !u!114 &114000012382768808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012995459100}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8b434dd22351845a2318c69385cd70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: Default
+  weaponID: Default CC
+  gameCharacter: {fileID: 114000013116285926}
+  damage: 100
+  usesAmmo: 0
+  maxAmmo: 0
+  currentAmmo: 0
+  bullets: {fileID: 114000013837096332}
+  fireDelay: 0.2
+  heatCostPerFiring: 10
 --- !u!114 &114000012507008864
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31265,8 +31317,7 @@ MonoBehaviour:
   overheated: 0
   gun: {fileID: 114000012059179194}
   activeWeapon: {fileID: 0}
-  defaultWeapon: {fileID: 114000013230178234, guid: 9b57267662d9c0746817060ff83d2689,
-    type: 2}
+  defaultWeapon: {fileID: 114000012382768808}
   weaponList: []
   weaponsGroupObject: {fileID: 0}
   removedWeaponList: []
@@ -31366,6 +31417,21 @@ MonoBehaviour:
   maxHealth: 200
   debrisTime: 4
   coveredPart: {fileID: 4000012077624274}
+--- !u!114 &114000013837096332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014246331680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69cfe0016089d24ba1f17b3db76abbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPool: []
+  bulletPrefab: {fileID: 1000012344838288, guid: e2b7a7498e6f2cd4890ecc888d030172,
+    type: 2}
+  maxBullets: 10
 --- !u!114 &114000013950945856
 MonoBehaviour:
   m_ObjectHideFlags: 1
