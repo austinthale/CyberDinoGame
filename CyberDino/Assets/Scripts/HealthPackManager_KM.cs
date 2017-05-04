@@ -22,6 +22,7 @@ public class HealthPackManager_KM : MonoBehaviour {
 	void Start () {
 		SpawnHealthPack += MoveToActive;
 		TriggerHealthPack += MoveToInactive;
+        GameCharacter.CharacterDeath += SpawnOnDeath;
 
 		//Populate the health pack lists. Ensure that all health packs begin disabled.
 		for (int i = 0; i < transform.childCount; i++) {
@@ -29,7 +30,7 @@ public class HealthPackManager_KM : MonoBehaviour {
 			inactiveHealthPacks [i].SetActive (false);
 		}
 
-		StartCoroutine (Spawn());
+		//StartCoroutine (Spawn());
 	}
 
 	/// <summary>
@@ -56,15 +57,22 @@ public class HealthPackManager_KM : MonoBehaviour {
 		activeHealthPacks.Remove (healthPack);
 	}
 
+    void SpawnOnDeath(GameCharacter dino)
+    {
+        GameObject pack = inactiveHealthPacks[0];
+        pack.transform.position = dino.transform.position;
+
+        SpawnHealthPack(pack);
+    }
+
 	/// <summary>
-	/// Spawn a random health pack every so often.
+	/// Spawn a health pack every so often.
 	/// </summary>
 	IEnumerator Spawn()
 	{
 		while (true) {
 			if (inactiveHealthPacks.Count != 0) {
-				int rand = UnityEngine.Random.Range (0, inactiveHealthPacks.Count);
-				SpawnHealthPack (inactiveHealthPacks [rand]);
+				SpawnHealthPack (inactiveHealthPacks [0]);
 			}
 
 			yield return new WaitForSeconds (SPAWN_DELAY);

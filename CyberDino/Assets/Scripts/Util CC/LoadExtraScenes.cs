@@ -4,7 +4,9 @@ using System.Collections;
 
 public class LoadExtraScenes : MonoBehaviour {
 
-    string[] extraScenes;
+
+    public string[] extraScenes;
+    
 
 	// Use this for initialization
 	void Awake () {
